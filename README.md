@@ -1,4 +1,4 @@
-# 📚 Trabalho de Faculdade
+# 📚 Trabalho de Faculdade - Despensa Planejada 
 
 Este é o repositório compartilhado para o desenvolvimento do nosso trabalho acadêmico. Todos os integrantes do grupo devem clonar o projeto e registrar suas informações abaixo.
 
