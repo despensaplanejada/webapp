@@ -9,7 +9,7 @@ Este é o repositório compartilhado para o desenvolvimento do nosso trabalho ac
 *Substitua as linhas abaixo com as suas informações após clonar o projeto:*
 
 * **Nome:** Alexandre - **RA:** 1700561
-* **Nome:** Nome do Integrante 2 - **RA:** Oitodigitos
+* **Nome:** Elienai Luiz da Silva - **RA:** 2208826
 * **Nome:** Nome do Integrante 3 - **RA:** Oitodigitos
 * **Nome:** Nome do Integrante 4 - **RA:** Oitodigitos
 * **Nome:** Nome do Integrante 5 - **RA:** Oitodigitos
