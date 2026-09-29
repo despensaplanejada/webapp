@@ -11,7 +11,7 @@ Este é o repositório compartilhado para o desenvolvimento do nosso trabalho ac
 * **Nome:** Alexandre - **RA:** 1700561
 * **Nome:** Elienai Luiz da Silva - **RA:** 2208826
 * **Nome:** Sabrina De Oliveira Escolastico Gomes - **RA:** 24222348
-* **Nome:** Nome do Integrante 4 - **RA:** Oitodigitos
+* **Nome:** Cínthia De Oliveira Araújo Monteiro - **RA:** 24205418
 * **Nome:** Nome do Integrante 5 - **RA:** Oitodigitos
 * **Nome:** Nome do Integrante 6 - **RA:** Oitodigitos
 
