@@ -12,7 +12,7 @@ Este é o repositório compartilhado para o desenvolvimento do nosso trabalho ac
 * **Nome:** Elienai Luiz da Silva - **RA:** 2208826
 * **Nome:** Sabrina De Oliveira Escolastico Gomes - **RA:** 24222348
 * **Nome:** Cínthia De Oliveira Araújo Monteiro - **RA:** 24205418
-* **Nome:** Nome do Integrante 5 - **RA:** Oitodigitos
+* **Nome:** Ana Clara Barbosa Nishimura - **RA:** 24211365
 * **Nome:** Nome do Integrante 6 - **RA:** Oitodigitos
 
 ---
