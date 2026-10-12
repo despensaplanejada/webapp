@@ -8,7 +8,7 @@ Este é o repositório compartilhado para o desenvolvimento do nosso trabalho ac
 
 *Substitua as linhas abaixo com as suas informações após clonar o projeto:*
 
-* **Nome:** Alexandre - **RA:** 1700561
+* **Nome:** Alexandre Ramos de Paula - **RA:** 1700561
 * **Nome:** Elienai Luiz da Silva - **RA:** 2208826
 * **Nome:** Sabrina De Oliveira Escolastico Gomes - **RA:** 24222348
 * **Nome:** Cínthia De Oliveira Araújo Monteiro - **RA:** 24205418
