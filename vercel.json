@@ -1,13 +1,11 @@
 {
   "version": 2,
   "builds": [
-    { "src": "webapp/index.html", "use": "@vercel/static" },
-    { "src": "webapp/backend/main.py", "use": "@vercel/python" }
+    { "src": "frontend/**/*", "use": "@vercel/static" },
+    { "src": "backend/main.py", "use": "@vercel/python" }
   ],
   "routes": [
-    { "src": "/api/(.*)", "dest": "webapp/backend/main.py" },
-    { "src": "/css/(.*)", "dest": "/webapp/css/$1" },
-    { "src": "/js/(.*)", "dest": "/webapp/js/$1" },
-    { "src": "/(.*)", "dest": "/webapp/index.html" }
+    { "src": "/api/(.*)", "dest": "backend/main.py" },
+    { "src": "/(.*)", "dest": "/frontend/$1" }
   ]
 }
