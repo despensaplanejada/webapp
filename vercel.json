@@ -1,0 +1,80 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "webapp/backend/main.py",
+      "use": "@vercel/python"
+    },
+    {
+      "src": "webapp/index.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "webapp/scrapers.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "webapp/css/*",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "webapp/js/*",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "webapp/manifest.json",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "webapp/sw.js",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "assets/img/*",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "webapp/img/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "webapp/backend/main.py"
+    },
+    {
+      "src": "/",
+      "dest": "/webapp/index.html"
+    },
+    {
+      "src": "/css/(.*)",
+      "dest": "/webapp/css/$1"
+    },
+    {
+      "src": "/js/(.*)",
+      "dest": "/webapp/js/$1"
+    },
+    {
+      "src": "/img/(.*)",
+      "dest": "/webapp/img/$1"
+    },
+    {
+      "src": "/manifest.json",
+      "dest": "/webapp/manifest.json"
+    },
+    {
+      "src": "/sw.js",
+      "dest": "/webapp/sw.js"
+    },
+    {
+      "src": "/scrapers.html",
+      "dest": "/webapp/scrapers.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ],
+  "name": "dispensa-planejada"
+}
