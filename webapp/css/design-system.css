@@ -1,0 +1,329 @@
+/* ================================================================
+   DISPENSA PLANEJADA — DESIGN SYSTEM
+   Design Tokens, Tipografia, Espaçamento e Animações
+   ================================================================ */
+
+/* ---------- Google Fonts ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+/* ================================================================
+   CSS CUSTOM PROPERTIES (Design Tokens)
+   ================================================================ */
+:root {
+  /* --- Paleta Adobe Color ---
+     #F2EDD5 (Creme/Bege Claro - Superfície/Background)
+     #E7390D (Vermelho Alaranjado - Destaques/Alertas/Errors)
+     #F26716 (Laranja Vibrante - Acentos/CTAs)
+     #084A24 (Verde Escuro - Cor Primária/Brand)
+     #04261E (Verde Floresta Muito Escuro - Fundo Escuro/Bordas/Texto Forte)
+  --- */
+
+  /* Cores Primárias (Verde #084A24) */
+  --color-primary-50:  #f0fdf4;
+  --color-primary-100: #dcfce7;
+  --color-primary-200: #bbf7d0;
+  --color-primary-500: #084a24;
+  --color-primary-600: #063c1d;
+  --color-primary-700: #04261e;
+
+  /* Cores de Acento (Laranja #F26716) */
+  --color-accent-400: #ff8534;
+  --color-accent-500: #f26716;
+  --color-accent-600: #d95305;
+  --color-accent-700: #b34100;
+
+  /* Cores de Alerta / CTA Secundário (Vermelho Alaranjado #E7390D) */
+  --color-warning-400: #ff5429;
+  --color-warning-500: #e7390d;
+  --color-warning-600: #c42c05;
+
+  /* Cores de Erro */
+  --color-error-500: #e7390d;
+  --color-error-600: #c42c05;
+
+  /* Cores por Loja */
+  --color-loja-carrefour: #1d4ed8;
+  --color-loja-pao-de-acucar: #e7390d;
+  --color-loja-atacadao: #084a24;
+
+  /* --- Superfícies e Bordas Nítidas (Light Mode) --- */
+  --color-bg:           #f2edd5;  /* Creme da Paleta */
+  --color-surface:      #ffffff;
+  --color-surface-alt:  #e9e3c8;
+  --color-border:       #04261e;  /* Bordas escuras e nítidas com tom da paleta */
+  --color-border-light: #084a24;
+  --border-width:       2px;      /* Bordas bem definidas e visibles */
+
+  /* --- Texto (Light Mode) --- */
+  --color-text-primary:   #04261e;  /* Verde floresta escuro para contraste máximo */
+  --color-text-secondary: #084a24;
+  --color-text-tertiary:  #2d5045;
+  --color-text-inverse:   #f2edd5;
+
+  /* --- Tipografia --- */
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-size-xs:   0.75rem;   /* 12px */
+  --font-size-sm:   0.875rem;  /* 14px */
+  --font-size-base: 1rem;      /* 16px */
+  --font-size-lg:   1.125rem;  /* 18px */
+  --font-size-xl:   1.25rem;   /* 20px */
+  --font-size-2xl:  1.5rem;    /* 24px */
+  --font-size-3xl:  1.875rem;  /* 30px */
+  --font-size-4xl:  2.25rem;   /* 36px */
+
+  --font-weight-normal:    400;
+  --font-weight-medium:    500;
+  --font-weight-semibold:  600;
+  --font-weight-bold:      700;
+  --font-weight-extrabold: 800;
+
+  --line-height-tight:   1.25;
+  --line-height-normal:  1.5;
+  --line-height-relaxed: 1.75;
+
+  /* --- Espaçamento (8px Grid) --- */
+  --space-1:  0.25rem;  /* 4px */
+  --space-2:  0.5rem;   /* 8px */
+  --space-3:  0.75rem;  /* 12px */
+  --space-4:  1rem;     /* 16px */
+  --space-5:  1.25rem;  /* 20px */
+  --space-6:  1.5rem;   /* 24px */
+  --space-8:  2rem;     /* 32px */
+  --space-10: 2.5rem;   /* 40px */
+  --space-12: 3rem;     /* 48px */
+  --space-16: 4rem;     /* 64px */
+
+  /* --- Border Radius --- */
+  --radius-sm:   0.375rem;  /* 6px */
+  --radius-md:   0.5rem;    /* 8px */
+  --radius-lg:   0.75rem;   /* 12px */
+  --radius-xl:   1rem;      /* 16px */
+  --radius-2xl:  1.25rem;   /* 20px */
+  --radius-full: 9999px;
+
+  /* --- Sombras Nítidas --- */
+  --shadow-sm:  0 2px 4px rgba(4, 38, 30, 0.08);
+  --shadow-md:  0 4px 8px rgba(4, 38, 30, 0.12);
+  --shadow-lg:  0 8px 16px rgba(4, 38, 30, 0.16);
+  --shadow-xl:  0 12px 24px rgba(4, 38, 30, 0.20);
+
+  /* --- Transições --- */
+  --transition-fast:   150ms ease;
+  --transition-normal: 250ms ease;
+  --transition-slow:   350ms ease;
+
+  /* --- Z-Index --- */
+  --z-dropdown: 20;
+  --z-sticky:   30;
+  --z-modal:    50;
+  --z-toast:    60;
+
+  /* --- Layout --- */
+  --max-width: 72rem;  /* 1152px */
+}
+
+/* ================================================================
+   DARK MODE (Refatorado para contraste máximo com a Paleta Adobe Color)
+   ================================================================ */
+@media (prefers-color-scheme: dark) {
+  :root:not(.light) {
+    --color-bg:           #02140f;  /* Fundo ultradark verde floresta */
+    --color-surface:      #052c23;  /* Cartão #052C23 com excelente contraste */
+    --color-surface-alt:  #0a3f33;  /* Cartão secundário com borda */
+    --color-border:       #f26716;  /* Bordas Laranja Vibrante da Paleta */
+    --color-border-light: #084a24;
+
+    --color-text-primary:   #ffffff;  /* Branco puro para texto principal (100% legível) */
+    --color-text-secondary: #f2edd5;  /* Creme para texto secundário */
+    --color-text-tertiary:  #c7bfa3;  /* Creme médio para metadados */
+    --color-text-inverse:   #04261e;
+
+    --color-primary-50:  #084a24;
+    --color-primary-100: #0a3f33;
+    --color-primary-500: #34d399;
+    --color-primary-600: #10b981;
+    --color-primary-700: #059669;
+
+    --color-accent-500: #f26716;
+    --color-accent-600: #d95305;
+    --color-accent-700: #b34100;
+
+    --shadow-sm:  0 2px 4px rgba(0, 0, 0, 0.5);
+    --shadow-md:  0 4px 8px rgba(0, 0, 0, 0.6);
+    --shadow-lg:  0 8px 16px rgba(0, 0, 0, 0.7);
+    --shadow-xl:  0 12px 24px rgba(0, 0, 0, 0.8);
+  }
+}
+
+.dark {
+  --color-bg:           #02140f;
+  --color-surface:      #052c23;
+  --color-surface-alt:  #0a3f33;
+  --color-border:       #f26716;
+  --color-border-light: #084a24;
+
+  --color-text-primary:   #ffffff;
+  --color-text-secondary: #f2edd5;
+  --color-text-tertiary:  #c7bfa3;
+  --color-text-inverse:   #04261e;
+
+  --color-primary-50:  #084a24;
+  --color-primary-100: #0a3f33;
+  --color-primary-500: #34d399;
+  --color-primary-600: #10b981;
+  --color-primary-700: #059669;
+
+  --color-accent-500: #f26716;
+  --color-accent-600: #d95305;
+  --color-accent-700: #b34100;
+
+  --shadow-sm:  0 2px 4px rgba(0, 0, 0, 0.5);
+  --shadow-md:  0 4px 8px rgba(0, 0, 0, 0.6);
+  --shadow-lg:  0 8px 16px rgba(0, 0, 0, 0.7);
+  --shadow-xl:  0 12px 24px rgba(0, 0, 0, 0.8);
+}
+
+/* ================================================================
+   RESET & BASE
+   ================================================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  color: var(--color-text-primary);
+  background-color: var(--color-bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ================================================================
+   SCROLLBAR
+   ================================================================ */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: var(--color-surface-alt); }
+::-webkit-scrollbar-thumb {
+  background: var(--color-text-tertiary);
+  border-radius: var(--radius-sm);
+}
+::-webkit-scrollbar-thumb:hover { background: var(--color-text-secondary); }
+
+/* ================================================================
+   FOCUS VISIBLE (Acessibilidade)
+   ================================================================ */
+:focus-visible {
+  outline: 2px solid var(--color-primary-500);
+  outline-offset: 2px;
+}
+
+/* ================================================================
+   SKIP LINK (Acessibilidade)
+   ================================================================ */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: var(--space-4);
+  z-index: var(--z-modal);
+  padding: var(--space-2) var(--space-4);
+  background: var(--color-primary-600);
+  color: var(--color-text-inverse);
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-semibold);
+  text-decoration: none;
+  transition: top var(--transition-fast);
+}
+.skip-link:focus {
+  top: var(--space-4);
+}
+
+/* ================================================================
+   ANIMAÇÕES
+   ================================================================ */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; transform: translateY(0); }
+  to   { opacity: 0; transform: translateY(8px); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.5; }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes ripple {
+  to { transform: scale(4); opacity: 0; }
+}
+
+.animate-fade-in  { animation: fadeIn var(--transition-normal) both; }
+.animate-slide-up { animation: slideUp var(--transition-slow) both; }
+.animate-pulse    { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+
+/* Skeleton Loader */
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--color-surface-alt) 25%,
+    var(--color-border) 50%,
+    var(--color-surface-alt) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+  border-radius: var(--radius-md);
+}
+
+/* ================================================================
+   UTILITÁRIOS
+   ================================================================ */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: var(--space-4);
+}
+
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
